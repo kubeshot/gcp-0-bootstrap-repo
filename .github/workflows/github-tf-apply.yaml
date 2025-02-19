@@ -60,6 +60,8 @@ jobs:
             sed -i'' -e "s/UPDATE_ME/${TF_BACKEND}/" $i
             sed -i'' -e "s/UPDATE_PROJECTS_BACKEND/${TF_BACKEND}/" $i
           done
+      - name: Grant execute permission to tf-wrapper.sh
+        run: chmod +x ${GITHUB_WORKSPACE}/tf-wrapper.sh
 
       - id: init
         run: |
