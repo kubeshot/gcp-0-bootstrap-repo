@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-org_id = "REPLACE_ME" # format "000000000000"
+org_id = "252632484771" # format "00000000000"
 
-billing_account = "REPLACE_ME" # format "000000-000000-000000"
+billing_account = "01F01C-EC0BAC-DD9482" # format "000000-000000-000000"
 
 // For enabling the automatic groups creation, uncoment the
 // variables and update the values with the group names
 groups = {
   create_required_groups = true # Change to true to create the required_groups
-  create_optional_groups = true # Change to true to create the optional_groups
-  billing_project        = "REPLACE_ME"  # Fill with bootstrap project id (the one you are starting with) to create required or optional groups
+  create_optional_groups = false # Change to true to create the optional_groups
+  billing_project        = "test-harjot-prj"  # Fill with bootstrap project id (the one you are starting with) to create required or optional groups
   required_groups = {
-    group_org_admins           = "gcp-organization-admins@REPLACE_ME" # example "gcp-organization-admins@example.com"
-    group_billing_admins       = "gcp-billing-admins@REPLACE_ME" # example "gcp-billing-admins@example.com"
-    billing_data_users         = "gcp-billing-data@REPLACE_ME" # example "gcp-billing-data@example.com"
-    audit_data_users           = "gcp-audit-data@REPLACE_ME" # example "gcp-audit-data@example.com"
-    monitoring_workspace_users = "gcp-monitoring-workspace@REPLACE_ME" # example "gcp-monitoring-workspace@example.com"
+    group_org_admins           = "gcp-organization-admins@kubeshot.com" # example "gcp-organization-admins@example.com"
+    group_billing_admins       = "gcp-billing-admins@kubeshot.com" # example "gcp-billing-admins@example.com"
+    billing_data_users         = "gcp-billing-data@kubeshot.com" # example "gcp-billing-data@example.com"
+    audit_data_users           = "gcp-audit-data@kubeshot.com" # example "gcp-audit-data@example.com"
+    monitoring_workspace_users = "gcp-monitoring-workspace@kubeshot.com" # example "gcp-monitoring-workspace@example.com"
   }
   optional_groups = {
      gcp_security_reviewer      = "gcp_security_reviewer@REPLACE_ME" #"gcp_security_reviewer_local_test@example.com"
@@ -48,7 +48,7 @@ default_region = "northamerica-northeast1"
 # the provided folder instead of the root organization.
 # The variable value is the numeric folder ID
 # The folder must already exist.
-parent_folder = "01234567890"
+parent_folder = "687502336124"
 
 
 /* ----------------------------------------
@@ -56,12 +56,12 @@ parent_folder = "01234567890"
    ---------------------------------------- */
 #  Un-comment github_bootstrap and its outputs if you want to use GitHub Actions instead of Cloud Build
 gh_repos = {
-    owner        = "YOUR-GITHUB-USER-OR-ORGANIZATION",
-    bootstrap    = "YOUR-BOOTSTRAP-REPOSITORY",
-    organization = "YOUR-ORGANIZATION-REPOSITORY",
-    environments = "YOUR-ENVIRONMENTS-REPOSITORY",
-    networks     = "YOUR-NETWORKS-REPOSITORY",
-    projects     = "YOUR-PROJECTS-REPOSITORY",
+    owner        = "kubeshot",
+    bootstrap    = "gcp-0-bootstrap-repo",
+    organization = "gcp-1-org-repo",
+    environments = "gcp-2-env-repo",
+    networks     = "gcp-3-network-repo",
+    projects     = "gcp-4-project-repo",
 }
 #
 #  to prevent saving the `gh_token` in plain text in this file,
@@ -69,7 +69,6 @@ gh_repos = {
 #  as an environment variable before running terraform.
 #  Run the following commnad in your shell:
 #   export TF_VAR_gh_token="YOUR-FINE-GRAINED-ACCESS-TOKEN"
-
 
 /* ----------------------------------------
     Specific to jenkins_bootstrap module
