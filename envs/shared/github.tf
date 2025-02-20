@@ -89,15 +89,15 @@ module "gh_cicd" {
   ]
 }
 
-module "gh_oidc" {
-  source = "terraform-google-modules/github-actions-runners/google//modules/gh-oidc"
-  version = "~> 3.1"
+# module "gh_oidc" {
+#   source = "terraform-google-modules/github-actions-runners/google//modules/gh-oidc"
+#   version = "~> 3.1"
 
-  project_id  = module.gh_cicd.project_id
-  pool_id     = "foundation-pool"
-  provider_id = "foundation-gh-provider"
-  sa_mapping  = local.sa_mapping
-}
+#   project_id  = module.gh_cicd.project_id
+#   pool_id     = "foundation-pool"
+#   provider_id = "foundation-gh-provider"
+#   sa_mapping  = local.sa_mapping
+# }
 
 resource "github_actions_secret" "secrets" {
   for_each = local.gh_secrets
