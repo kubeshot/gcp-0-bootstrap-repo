@@ -14,9 +14,15 @@
  * limitations under the License.
  */
 
+
 terraform {
   backend "gcs" {
-    bucket = "bkt-prj-b-seed-tfstate-2c7a"
+    bucket = "bkt-prj-b-seed-tfstate-8650"
     prefix = "terraform/bootstrap/state"
   }
 }
+# terraform {
+#   backend "local" {
+#     path = "terraform.tfstate"  # Path to the local state file
+#   }
+# }

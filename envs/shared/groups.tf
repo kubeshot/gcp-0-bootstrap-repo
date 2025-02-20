@@ -48,7 +48,6 @@ module "optional_group" {
   source   = "terraform-google-modules/group/google"
   version  = "~> 0.6"
   for_each = local.optional_groups_to_create
-
   id                   = each.value
   display_name         = each.key
   description          = each.key
