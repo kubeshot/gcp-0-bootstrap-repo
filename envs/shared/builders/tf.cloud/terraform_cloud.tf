@@ -262,7 +262,7 @@ module "tfc-oidc" {
   provider_id           = "foundation-tfc-provider"
   sa_mapping            = local.sa_mapping
   tfc_organization_name = local.tfc_org_name
-  attribute_condition = "assertion.sub.startsWith(\"repo:kubeshot/gcp-0-bootstrap-repo:\")"
+  attribute_condition = "assertion.sub.startsWith(\"organization:${local.tfc_org_name}:\")"
 }
 
 data "google_client_config" "default" {
