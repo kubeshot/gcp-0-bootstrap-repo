@@ -49,7 +49,7 @@ default_region = "northamerica-northeast1"
 # the provided folder instead of the root organization.
 # The variable value is the numeric folder ID
 # The folder must already exist.
-parent_folder = "687502336124"
+parent_folder = "676704635797"
 
 
 /* ----------------------------------------
