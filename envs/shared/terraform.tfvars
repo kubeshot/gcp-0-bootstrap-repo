@@ -15,29 +15,29 @@
  */
 
 
-org_id = "252632484771" # format "00000000000"
+org_id = "252632484771"
 
-billing_account = "01F01C-EC0BAC-DD9482" # format "000000-000000-000000"
+billing_account = "01F01C-EC0BAC-DD9482"
 
 // For enabling the automatic groups creation, uncoment the
 // variables and update the values with the group names
 groups = {
   create_required_groups = true # Change to true to create the required_groups
   create_optional_groups = false # Change to true to create the optional_groups
-  billing_project        = "test-harjot-prj"  # Fill with bootstrap project id (the one you are starting with) to create required or optional groups
+  billing_project        = "test-harjot-prj"
   required_groups = {
-    group_org_admins           = "gcp-organization-admins@kubeshot.com" # example "gcp-organization-admins@example.com"
-    group_billing_admins       = "gcp-billing-admins@kubeshot.com" # example "gcp-billing-admins@example.com"
-    billing_data_users         = "gcp-billing-data@kubeshot.com" # example "gcp-billing-data@example.com"
-    audit_data_users           = "gcp-audit-data@kubeshot.com" # example "gcp-audit-data@example.com"
-    monitoring_workspace_users = "gcp-monitoring-workspace@kubeshot.com" # example "gcp-monitoring-workspace@example.com"
+    group_org_admins           = "gcp-organization-admins@kubeshot.com"
+    group_billing_admins       = "gcp-billing-admins@kubeshot.com"
+    billing_data_users         = "gcp-billing-data@kubeshot.com"
+    audit_data_users           = "gcp-audit-data@kubeshot.com"
+    monitoring_workspace_users = "gcp-monitoring-workspace@kubeshot.com"
   }
   optional_groups = {
-     gcp_security_reviewer      = "gcp_security_reviewer@REPLACE_ME" #"gcp_security_reviewer_local_test@example.com"
-     gcp_network_viewer         = "gcp_network_viewer@REPLACE_ME" #"gcp_network_viewer_local_test@example.com"
-     gcp_scc_admin              = "gcp_scc_admin@REPLACE_ME" #"gcp_scc_admin_local_test@example.com"
-     gcp_global_secrets_admin   = "gcp_global_secrets_admin@REPLACE_ME" #"gcp_global_secrets_admin_local_test@example.com"
-     gcp_kms_admin              = "gcp_kms_admin@REPLACE_ME" #"gcp_kms_admin_local_test@example.com"
+     gcp_security_reviewer      = "gcp_security_reviewer@kubeshot.com"
+     gcp_network_viewer         = "gcp_network_viewer@kubeshot.com"
+     gcp_scc_admin              = "gcp_scc_admin@kubeshot.com"
+     gcp_global_secrets_admin   = "gcp_global_secrets_admin@kubeshot.com"
+     gcp_kms_admin              = "gcp_kms_admin@kubeshot.com"
    }
 }
 
@@ -62,7 +62,7 @@ gh_repos = {
     organization = "gcp-1-org-repo",
     environments = "gcp-2-env-repo",
     networks     = "gcp-3-network-repo",
-    projects     = "gcp-4-project-repo",
+    projects     = "gcp-4-project-rep",
 }
 #
 #  to prevent saving the `gh_token` in plain text in this file,
