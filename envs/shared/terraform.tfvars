@@ -15,29 +15,29 @@
  */
 
 
-org_id = "252632484771"
+org_id = "000000000000"
 
-billing_account = "01F01C-EC0BAC-DD9482"
+billing_account = "000000-000000-000000"
 
 // For enabling the automatic groups creation, uncoment the
 // variables and update the values with the group names
 groups = {
   create_required_groups = true # Change to true to create the required_groups
   create_optional_groups = false # Change to true to create the optional_groups
-  billing_project        = "test-harjot-prj"
+  billing_project        = "my-prj"
   required_groups = {
-    group_org_admins           = "gcp-organization-admins@kubeshot.com"
-    group_billing_admins       = "gcp-billing-admins@kubeshot.com"
-    billing_data_users         = "gcp-billing-data@kubeshot.com"
-    audit_data_users           = "gcp-audit-data@kubeshot.com"
-    monitoring_workspace_users = "gcp-monitoring-workspace@kubeshot.com"
+    group_org_admins           = "gcp-organization-admins@example.com"
+    group_billing_admins       = "gcp-billing-admins@example.com"
+    billing_data_users         = "gcp-billing-data@example.com"
+    audit_data_users           = "gcp-audit-data@example.com"
+    monitoring_workspace_users = "gcp-monitoring-workspace@example.com"
   }
   optional_groups = {
-     gcp_security_reviewer      = "gcp_security_reviewer@kubeshot.com"
-     gcp_network_viewer         = "gcp_network_viewer@kubeshot.com"
-     gcp_scc_admin              = "gcp_scc_admin@kubeshot.com"
-     gcp_global_secrets_admin   = "gcp_global_secrets_admin@kubeshot.com"
-     gcp_kms_admin              = "gcp_kms_admin@kubeshot.com"
+     gcp_security_reviewer      = "gcp_security_reviewer@example.com"
+     gcp_network_viewer         = "gcp_network_viewer@example.com"
+     gcp_scc_admin              = "gcp_scc_admin@example.com"
+     gcp_global_secrets_admin   = "gcp_global_secrets_admin@example.com"
+     gcp_kms_admin              = "gcp_kms_admin@example.com"
    }
 }
 
@@ -49,7 +49,7 @@ default_region = "northamerica-northeast1"
 # the provided folder instead of the root organization.
 # The variable value is the numeric folder ID
 # The folder must already exist.
-parent_folder = "676704635797"
+parent_folder = "000000000000"
 
 
 /* ----------------------------------------
@@ -57,12 +57,12 @@ parent_folder = "676704635797"
    ---------------------------------------- */
 #  Un-comment github_bootstrap and its outputs if you want to use GitHub Actions instead of Cloud Build
 gh_repos = {
-    owner        = "kubeshot",
-    bootstrap    = "gcp-0-bootstrap-repo",
-    organization = "gcp-1-org-repo",
-    environments = "gcp-2-env-repo",
-    networks     = "gcp-3-network-repo",
-    projects     = "gcp-4-project-repo",
+    owner        = "owner",
+    bootstrap    = "bootstrapRepo",
+    organization = "orgRepo",
+    environments = "envRepo",
+    networks     = "networksRepo",
+    projects     = "projectsRepo",
 }
 #
 #  to prevent saving the `gh_token` in plain text in this file,

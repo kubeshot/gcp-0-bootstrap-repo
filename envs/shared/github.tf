@@ -97,7 +97,7 @@ module "gh_oidc" {
   pool_id     = "foundation-pool"
   provider_id = "foundation-gh-provider"
   sa_mapping  = local.sa_mapping
-  attribute_condition = "assertion.repository_owner == 'kubeshot'"
+  attribute_condition = "assertion.repository_owner == '/GIT ORG NAME/'"
 }
 
 resource "github_actions_secret" "secrets" {
