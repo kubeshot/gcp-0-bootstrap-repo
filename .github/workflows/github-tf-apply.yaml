@@ -73,13 +73,17 @@ jobs:
           echo "terraform plan"
           ${GITHUB_WORKSPACE}/tf-wrapper.sh plan "${GITHUB_REF_NAME}" "${GITHUB_WORKSPACE}/policy-library" "${PROJECT_ID}" "FILESYSTEM" "GITHUB"
 
-      - id: validate
-        run: |
-          echo "validate"
-          ${GITHUB_WORKSPACE}/tf-wrapper.sh validate "${GITHUB_REF_NAME}" "${GITHUB_WORKSPACE}/policy-library" "${PROJECT_ID}" "FILESYSTEM" "GITHUB"
-          sed -i '26s/.*/  attribute_condition = "assertion.repository_owner == '\''kubeshot'\''"/' .terraform/modules/gh_oidc/modules/gh-oidc/main.tf
+      # - id: validate
+      #   run: |
+      #     echo "validate"
+      #     ${GITHUB_WORKSPACE}/tf-wrapper.sh validate "${GITHUB_REF_NAME}" "${GITHUB_WORKSPACE}/policy-library" "${PROJECT_ID}" "FILESYSTEM" "GITHUB"
+          
+      # - id: apply
+      #   run: |
+      #     echo "terraform apply"
+      #     ${GITHUB_WORKSPACE}/tf-wrapper.sh apply "${GITHUB_REF_NAME}" "${GITHUB_WORKSPACE}/policy-library" "${PROJECT_ID}" "FILESYSTEM" "GITHUB"
 
-      - id: apply
+      - id: destroy
         run: |
-          echo "terraform apply"
+          echo "terraform destroy"
           ${GITHUB_WORKSPACE}/tf-wrapper.sh apply "${GITHUB_REF_NAME}" "${GITHUB_WORKSPACE}/policy-library" "${PROJECT_ID}" "FILESYSTEM" "GITHUB"
