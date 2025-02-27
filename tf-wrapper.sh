@@ -184,6 +184,7 @@ tf_plan() {
   fi
   if [ -d "$path" ]; then
     cd "$path" || exit
+    terraform state rm module.seed_bootstrap.module.kms[0].google_kms_crypto_key.key[0]
     terraform plan -no-color -input=false -out "${tmp_plan}/${tf_file}.tfplan" || exit 21
     cd "$base_dir" || exit
   else
