@@ -62,7 +62,7 @@ gh_repos = {
     organization = "gcp-1-org-repo",
     environments = "gcp-2-env-repo",
     networks     = "gcp-3-network-repo",
-    projects     = "gcp-4-project-repo",
+    projects     = "gcp-4-project-rep",
 }
 #
 #  to prevent saving the `gh_token` in plain text in this file,
