@@ -50,7 +50,7 @@ module "seed_bootstrap" {
   folder_id                      = google_folder.bootstrap.id
   project_id                     = "${var.project_prefix}-b-seed-${random_id.suffix.hex}"
   state_bucket_name              = "${var.bucket_prefix}-${var.project_prefix}-b-seed-tfstate"
-  force_destroy                  = var.bucket_force_destroy
+  force_destroy                  = true
   billing_account                = var.billing_account
   group_org_admins               = var.groups.required_groups.group_org_admins
   group_billing_admins           = var.groups.required_groups.group_billing_admins
@@ -63,7 +63,7 @@ module "seed_bootstrap" {
   project_prefix                 = var.project_prefix
   encrypt_gcs_bucket_tfstate     = true
   key_rotation_period            = "7776000s"
-  kms_prevent_destroy            = !var.bucket_tfstate_kms_force_destroy
+  kms_prevent_destroy            = false
 
   project_labels = {
     environment       = "bootstrap"
