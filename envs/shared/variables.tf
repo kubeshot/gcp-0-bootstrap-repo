@@ -45,31 +45,31 @@ variable "org_policy_admin_role" {
 variable "project_prefix" {
   description = "Name prefix to use for projects created. Should be the same in all steps. Max size is 3 characters."
   type        = string
-  default     = "project"
+  default     = "projectTest"
 }
 
 variable "folder_prefix" {
   description = "Name prefix to use for folders created. Should be the same in all steps."
   type        = string
-  default     = "folder"
+  default     = "folderTest"
 }
 
 variable "bucket_prefix" {
   description = "Name prefix to use for state bucket created."
   type        = string
-  default     = "bucket"
+  default     = "bucketTest"
 }
 
 variable "bucket_force_destroy" {
   description = "When deleting a bucket, this boolean option will delete all contained objects. If false, Terraform will fail to delete buckets which contain objects."
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "bucket_tfstate_kms_force_destroy" {
   description = "When deleting a bucket, this boolean option will delete the KMS keys used for the Terraform state bucket."
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "restricted_enabled" {

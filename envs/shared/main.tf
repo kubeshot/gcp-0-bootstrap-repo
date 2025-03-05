@@ -35,7 +35,7 @@ locals {
 }
 
 resource "google_folder" "bootstrap" {
-  display_name = "${var.folder_prefix}-bootstrap"
+  display_name = "${var.folder_prefix}-bootstrap-test"
   parent       = local.parent
 }
 resource "random_id" "suffix" {
